@@ -1,18 +1,21 @@
 [project]
 name = "skinpy"
-version = "0.0.4"
+version = "0.0.5"
 description = "A Python library for Minecraft skins"
 authors = [
-    {name = "Tim Martin", email = "tim@timmart.in"},
-    {name = "Steven Van Ingelgem", email = "steven@vaningelgem.be"},
+    {name = "Tim Martin",email = "tim@timmart.in"},
+    {name = "Steven Van Ingelgem", email = "steven@vaningelgem.be"}
 ]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.13"
 dependencies = [
-    "attrs",
-    "numpy",
-    "Pillow",
-    "click",
+    "pillow (>=11.2.1,<12.0.0)",
+    "numpy (>=2.3.0,<3.0.0)",
+    "attrs (>=25.3.0,<26.0.0)",
+    "click (>=8.2.1,<9.0.0)",
+    "aiofiles (>=24.1.0,<25.0.0)"
 ]
-requires-python = ">=3.9"
 classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
@@ -20,30 +23,12 @@ classifiers = [
     "Programming Language :: Python :: 3.12",
     "License :: OSI Approved :: MIT License",
 ]
-readme = "README.md"
-license = {text = "MIT"}
 
-[project.scripts]
-skinpy = "skinpy.__main__:cli"
 
 [project.urls]
-repository = "https://github.com/t-mart/skinpy"
+repository = "https://github.com/AurionBE/skinpy"
+
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "ruff",
-    "black",
-    "pytest",
-    "colorspacious",
-    "matplotlib",
-]
-
-[tool.mypy]
-plugins = "numpy.typing.mypy_plugin"
-
-[tool.pyright]
-plugins = "numpy.typing.mypy_plugin"
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

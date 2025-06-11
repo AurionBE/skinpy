@@ -151,8 +151,3 @@ Similarly, body parts are string literals under `BodyPartId`:
 - `left_leg`
 
 Body parts that are "left" or "right" follow the same perspective as before: from the observer's point of view.
-
-## Examples
-
-You can find the skins/renders, and the code to produced them, in
-[examples](./examples).
